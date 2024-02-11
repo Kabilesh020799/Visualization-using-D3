@@ -1,0 +1,199 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.side-header {
+  font-size: 14px;
+  color: #5F5F5F;
+  text-align: left;
+  font-weight: 100;
+  transform: scaleY(1.3);
+}
+
+.side-header-bold {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-stretch: extra-expanded;
+  font-size: 15px;
+  transform: scaleY(1.3);
+  display: block;
+}
+
+.main-body {
+  background: url('../images/background.jpg') no-repeat;
+  background-size: contain;
+  overflow: scroll;
+  background-size: 760px 2360px;
+  min-height: 2360px;
+  min-width: 760px;
+  width: 760px;
+  height: 2360px;
+  overflow: hidden;
+}
+
+.main-container {
+  text-align: center;
+  font-weight: bold;
+  color: #605E53;
+  font-family: Times, serif;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 25px;
+  padding: 0 3rem;
+  margin-top: 28.1rem;
+  overflow: hidden;
+}
+
+.container-text {
+  margin-top: 2rem;
+}
+
+.second-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.second-container-piechart {
+  width: 50%;
+  text-align: left;
+  padding-left: 1rem;
+}
+.second-container-pie-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: start;
+}
+.second-container > .second-container-piechart > .second-container-piechart-heading > .bold {
+  display: block;
+}
+
+.second-container-techs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 2.5rem;
+}
+
+.second-container-techs-stacks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  color: #F17028;
+  text-align: left;
+  margin-top: 30px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.first-img {
+  grid-column: 1 / -1;
+  text-align: left;
+  width: 200px;
+}
+.second-container-techs-stack {
+  cursor: pointer;
+}
+.second-container-techs-stack:hover {
+  transform: scale(1.2);
+}
+
+.second-container-techs-stacks > .second-container-techs-stack {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.second-container-techs-stacks > .second-container-techs-stack > .text {
+  text-transform: capitalize;
+  max-width: 150px;
+  line-height: 15px;
+  font-size: 10px;
+}
+
+.second-container-techs-stacks > .second-container-techs-stack > img {
+  width: 3.5rem;
+}
+
+.second-container-techs-stack:first-child > .text {
+  max-width: 130px;
+}
+
+.third-container {
+  margin-top: 4.9rem;
+  display: flex;
+  min-height: 320px;
+  padding-left: 2rem;
+}
+
+.third-container-left {
+  min-width: 250px;
+  margin-top: 1rem;
+}
+
+.third-container-right {
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.fourth-container {
+  margin-top: 2.52rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.fifth-container {
+  margin-top: 1rem;
+  display: flex;
+  height: 20rem;
+  padding-left: 1.5rem;
+}
+
+.fifth-container-left {
+  width: 50%;
+}
+
+.pie-chart-literate {
+  display: flex;
+  justify-content: start;
+  width: 100% !important;
+  gap: 2rem;
+  height: 10rem;
+}
+
+.fifth-container-right {
+  margin-left: 1rem;
+  width: 50%;
+}
+
+.pie-chart-tech {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+
+.main-footer {
+  color: #A09E91;
+  text-align: center;
+  padding: 0 8rem;
+  font-size: 12px;
+  line-height: 1rem;
+}
+
+path.slice {
+  stroke-width: 2px;
+}
+
+polyline {
+  opacity: .3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}

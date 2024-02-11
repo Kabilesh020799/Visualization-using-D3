@@ -1,0 +1,48 @@
+{
+  "piechartConstants" : [
+    { "name": "Anticipated Cost Savings", "value": 29, "color": "#D66534"},
+    { "name":  "A Customer’s Successful", "value": 3, "color": "#FFE6BE", "name1": "Implementation" },
+    { "name": "Reputational Value", "value": 9, "color": "#FCCF85" },
+    { "name": "Increased Agility", "value": 15, "color": "#FEBA45" },
+    { "name": "Ability to Reach", "value": 18, "color": "#F9A336", "name1": "New Customers" },
+    { "name": "New Revenue Stream", "value": 24, "color": "#F78644" }
+  ],
+  "barPercentConstants": [
+    { "name": "rarely evaluate", "value": 22 },
+    { "name": "frequently evaluate", "value": 31 }
+  ],
+  "barChartConstants": [
+    { "name": "Innovation Group", "value" : 7 },
+    { "name": "Business Unit", "value": 7 },
+    { "name": "Executive Management", "value": 12},
+    { "name": "Multiple Groups' Decision", "value": 33},
+    { "name": "IT Group", "value": 39}
+  ],
+  "barChartVerticalConstants": [
+    { "name": "Big Data Analytics", "value": 38, "color": "#E97D35" },
+    { "name": "AI/Machine Learning/Cognitive", "value": 20, "color": "#F78A4A" },
+    { "name": "Public Cloud", "value": 18, "color": "#F8A12F" },
+    { "name": "IoT", "value": 14, "color": "#FFBB46" },
+    { "name": "Blockchain", "value": 7, "color": "#FED084" },
+    { "name": "AR/VR", "value": 2, "color": "#FEEAC7" },
+    { "name": "3D Printing", "value": 1, "color": "#FFF4DA" }
+  ],
+  "pieChartLiteracy": [
+    { "name": "Yes", "value": 53 },
+    { "name": "No", "value": 25 },
+    { "name": "Unsure", "value": 22 }
+  ],
+  "pieChartTech": [
+    { "name": "Very", "value": 23, "color": "#EC793B" },
+    { "name": "Moderately", "value": 50, "color": "#FF9822" },
+    { "name": "Not Very", "value": 17, "color": "#FDCF73" },
+    { "name": "Not at All", "value": 7, "color": "#FEEBC2" }
+  ],
+  "imageConstants": [
+    { "name": "AI/Machine Learning / Cognitive Tech", "image": "image1" },
+    { "name": "Public Cloud", "image": "image2" },
+    { "name": "Internet Of Things", "image": "image3" },
+    { "name": "Block Chain", "image": "image4" },
+    { "name": "Big Data Analytics", "image": "image5" }
+  ]
+}

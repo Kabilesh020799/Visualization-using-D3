@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>DIGITAL TRANSFORMATION: ENTERPRISES MAJOR MOTIVATIONS AND GREATEST CHALLENGES</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./components/pie-chart/pieChart.js"></script>
+    <script src="./components/pie-chart/pie-chart-rotate.js"></script>
+    <script src="./components/bar-percent/barPercent.js"></script>
+    <script src="./components/bar-chart/barChart.js"></script>
+    <script src="./components/image-container/imageContainer.js"></script>
+  </head>
+  <body>
+    <div class="main-body">
+      <div class="main-container">
+        <div class="container-text">
+          ISACS's Digital Transformation Barometer - research of more than 4,100 business technology professionals worldwide- found that the emerging technologies that are the most transformational also pose the most organizational challenges in terms of perceived risk and resistence to change. To enable a successful digital transformation journey, enterprises require strong governence and risk management programs, which drive confidence and enable speed of business. 
+        </div>
+        <div class="second-container">
+          <div class="second-container-piechart">
+            <div class="second-container-piechart-heading side-header">
+              Top Motivators for Implementing an <span class="bold side-header-bold">Emerging Technology</span>
+            </div>
+            <div class="second-container-pie-wrapper">
+              <script>
+                getPieChartData({
+                  width: 200,
+                  legendHeight: 250,
+                  height: 180,
+                  selector: '.second-container-pie-wrapper',
+                  legendSelector: '.second-container-pie-wrapper',
+                })
+              </script>
+            </div>
+          </div>
+          <div class="second-container-techs">
+            <div class="second-container-techs-heading side-header">
+              Technologies Facing The Most Organizational <span class="side-header-bold">Challenges or Resistance</span>
+            </div>
+            <div class="second-container-techs-stacks">
+              <script> 
+                {constructImage()}
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="third-container">
+          <div class="third-container-left">
+            <div class="heading side-header">
+              <span class="side-header-bold">Evaluting Opportunities</span> Arising From Emerging Technologies
+            </div>
+            <div class="percentage">
+              <script>
+                constructBarPercent();
+              </script>
+            </div>
+          </div>
+          <div class="third-container-right">
+            <div class="side-header">
+              <span class="side-header-bold">Who is Reponsible</span>
+              for Evaluating Emerging Technologies
+            </div>
+            <div class="bar-chart">
+              <script>
+                constructBarChart({
+                  key: 'barChartConstants',
+                  selector: '.bar-chart',
+                  width: 400,
+                  height: 30,
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="fourth-container">
+          <div style="text-align: left; display: flex; position: absolute; gap: 60px;">
+            <div class="side-header">Technologies With Most Potential to <span class="side-header-bold">Deliver Transformational Value</span></div>
+            <div class="bar-chart-legend"></div>
+          </div>
+          <div class="bar-chart-vertical">
+            <script>
+              constructBarChart({
+                key: 'barChartVerticalConstants',
+                selector: '.bar-chart-vertical',
+                legendSelector: '.bar-chart-legend',
+                width: 700,
+                height: 50,
+                type: 'vertical',
+              });
+            </script>
+          </div>
+        </div>
+        <div class="fifth-container">
+          <div class="fifth-container-left">
+            <script>
+              getPieChartLiterate({
+                width: 75,
+                selector: '.pie-chart-literate',
+                height: 150,
+              })
+            </script>
+            <div class="side-header">
+              Are Your Organization's Leader <span class="side-header-bold">Digitally Literate?</span>
+            </div>
+            <div class="pie-chart-literate"></div>
+          </div>
+          <div class="fifth-container-right">
+            <script>
+              getPieChartTechData({
+                width: 68,
+                selector: '.pie-chart-tech',
+                height: 140,
+                type: 'single',
+                stroke: 28,
+              })
+            </script>
+            <div class="side-header">
+              Are Your Organization's Leaders <span class="side-header-bold">Receptive to Emerging Tech?</span>
+            </div>
+            <div class="pie-chart-tech"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        Companies with digitally literate leaders are more aggresive and receptive evaluating and adopting emerging technologies in their quests to achieve digital transformation.
+      </footer>
+    </div>
+  </body>
+</html>

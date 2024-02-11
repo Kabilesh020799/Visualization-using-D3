@@ -1,0 +1,10 @@
+{
+  "piechartConstants" : [
+    { "name": "Anticipated Cost Savings", "value": 29, "color": "#D66534"},
+    { "name": "New Revenue Stream", "value": 24, "color": "#F78644" },
+    { "name": "Ability to Reach New Customers", "value": 18, "color": "#F9A334" },
+    { "name": "Increased Agility", "value": 15, "color": "#F9A332" },
+    { "name": "Reputational Value", "value": 11, "color": "#FEBA45" },
+    { "name": "A Customer’s Successful Implementation", "value": 1, "color": "#FFE6BE" }
+  ]
+}
