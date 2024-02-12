@@ -39,6 +39,9 @@ const barChart = (props) => {
   const isVertical = type === 'vertical';
   const baseIndex = 360;
 
+  var customColor = d3.scaleOrdinal().domain(data.map((dI) => dI.name))
+  .range(d3.schemeSet3)
+
   // baritems
   let barItems = [... (barItemsData || data)];
 
@@ -75,13 +78,13 @@ const barChart = (props) => {
     .style('cursor', 'pointer')
     .on('mouseover', (event, d) => {
       d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
-        .attr('fill', '#f2670d')
+        .attr('fill', dr => customColor(dr.name))
     })
     .on('mouseout', (event, d) => {
       d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
       .transition()
       .duration(1000)
-      .attr('fill', d => d.color ? d.color : '#FDB342')
+      .attr('fill', d.color ? d.color : '#FDB342')
     })
     .transition()
     .duration(1000)
@@ -99,13 +102,13 @@ const barChart = (props) => {
     .style('font-weight', 'bold')
     .on('mouseover', (event, d) => {
       d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
-        .attr('fill', '#f2670d')
+        .attr('fill', dr => customColor(dr.name))
     })
     .on('mouseout', (event, d) => {
       d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
       .transition()
       .duration(1000)
-      .attr('fill', d => d.color ? d.color : '#FDB342')
+      .attr('fill', d.color ? d.color : '#FDB342')
     })
     .transition()
     .duration(1000)
@@ -122,13 +125,13 @@ const barChart = (props) => {
       .style('fill', 'white')
       .on('mouseover', (event, d) => {
         d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
-          .attr('fill', '#f2670d')
+          .attr('fill', dr => customColor(dr.name))
       })
       .on('mouseout', (event, d) => {
         d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
         .transition()
         .duration(1000)
-        .attr('fill', d => d.color ? d.color : '#FDB342')
+        .attr('fill', d.color ? d.color : '#FDB342')
       })
       .style('font-weight', "bold");
     }, 800);
@@ -141,13 +144,13 @@ const barChart = (props) => {
       .style('fill', '#656565')
       .on('mouseover', (event, d) => {
         d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
-          .attr('fill', '#f2670d')
+          .attr('fill', dr => customColor(dr.name))
       })
       .on('mouseout', (event, d) => {
         d3.select(`.rect${d.name.split(/[ /']/).join('-')}`)
         .transition()
         .duration(1000)
-        .attr('fill', d => d.color ? d.color : '#FDB342')
+        .attr('fill', d.color ? d.color : '#FDB342')
       })
       .transition()
       .duration(1000)
@@ -157,7 +160,6 @@ const barChart = (props) => {
       const legendSpacing = 4;
       const legendSvg = d3.select(legendSelector)
           .append('svg')
-          .attr('width', 'fit-content')
           .attr('height', 150)
       
       data.forEach((dataItem, index) => {
@@ -173,7 +175,7 @@ const barChart = (props) => {
           .attr('y', 0)
           .style('cursor', 'pointer')
           .on('mouseover', () => {
-            d3.select(`.rect${dataItem.name.split(/[ /']/).join('-')}`).attr('fill', '#f2670d');
+            d3.select(`.rect${dataItem.name.split(/[ /']/).join('-')}`).attr('fill', customColor(dataItem.name));
           })
           .on('mouseout', () => {
             d3.select(`.rect${dataItem.name.split(/[ /']/).join('-')}`).attr('fill', dataItem.color ? dataItem.color : '#FDB342');
@@ -189,7 +191,7 @@ const barChart = (props) => {
           .style('cursor', 'pointer')
           .style('text-decoration', `${barItems?.findIndex((barItem) => barItem?.name === dataItem.name) !== -1 ? 'none' : 'line-through'}`)
           .on('mouseover', () => {
-            d3.select(`.rect${dataItem.name.split(/[ /']/).join('-')}`).attr('fill', '#f2670d');
+            d3.select(`.rect${dataItem.name.split(/[ /']/).join('-')}`).attr('fill', customColor(dataItem.name));
           })
           .on('mouseout', () => {
             d3.select(`.rect${dataItem.name.split(/[ /']/).join('-')}`).attr('fill', dataItem.color ? dataItem.color : '#FDB342');
