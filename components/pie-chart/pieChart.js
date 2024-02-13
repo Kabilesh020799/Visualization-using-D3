@@ -72,6 +72,7 @@ const getPieChartTechData = async({ width, selector, height, stroke, label }) =>
           type: 'single',
           heightValue: height,
           stroke,
+          textType: 'bold',
         })
       })
     })
@@ -85,7 +86,8 @@ const constructPieChart = async(props) => {
     selector,
     heightValue,
     stroke,
-    pieItemsData
+    pieItemsData,
+    textType,
   } = props;
 
   // setting height and radius
@@ -179,16 +181,16 @@ const constructPieChart = async(props) => {
     // center text
     svg.append('text')
       .text(`${pieItems[0].value}%`)
-      .style('fill', '#EC8B40')
+      .style('fill', textType === 'bold' ? "#5F5F5F" : '#EC8B40')
       .style('font-weight', 'bold')
-      .style('font-size', '16px')
-      .attr('x', -10)
-      .attr('y', 5)
+      .style('font-size', textType === 'bold' ? '22px' : '16px')
+      .attr('x', textType === 'bold' ? pieItems[0].value < 10 ? -15 : -20 : -14)
+      .attr('y', textType === 'bold' ? 8 : 5)
     
     // name text
     const text = svg.append('text')
       .text(`${pieItems[0].name}`)
-      .style('fill', '#EC8B40')
+      .style('fill', textType === 'bold' ? "#5F5F5F" : '#EC8B40')
       .style('font-weight', 'bold')
       .style('font-size', '12px')
       .attr('x', 0)
